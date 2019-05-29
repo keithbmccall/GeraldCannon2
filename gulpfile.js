@@ -2,8 +2,10 @@
    Imports
    ========================================================================== */
 const gulp = require('gulp');
-const {styles, stylesMin, watchStyles} = require('./gulp-config/styles');
-const {scripts, watchScripts} = require('./gulp-config/scripts');
+const gulpPath = './gulp-config'
+const {styles, stylesMin, watchStyles} = require(gulpPath + '/styles');
+const {scripts, watchScripts} = require(gulpPath + '/scripts');
+const {watchHbs} = require(gulpPath + '/hbs');
 
 /* ==========================================================================
    Gulp Commands
@@ -16,7 +18,7 @@ exports.watchStyles = watchStyles;
 exports.scripts = scripts;
 exports.watchScripts = watchScripts;
 // combination
-exports.watch = gulp.parallel(watchStyles, watchScripts, stylesMin);
+exports.watch = gulp.parallel(watchStyles, watchScripts, watchHbs);
 
 
 

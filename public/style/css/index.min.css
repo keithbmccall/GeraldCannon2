@@ -158,4 +158,115 @@ nav ul,
 nav ol {
   list-style: none outside none; }
 
+body {
+  font-family: "Barlow", sans-serif; }
+
+li {
+  list-style-type: none; }
+
+.flex {
+  display: flex; }
+
+.absolute-centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+
+.absolute-centered-v {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+.absolute-centered-h {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%); }
+
+.relative {
+  position: relative; }
+
+body {
+  overflow-x: hidden; }
+
+.main {
+  margin-top: 100px;
+  padding: 0 20px; }
+
+.invert_scroll {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding-left: 20px;
+  z-index: 500;
+  top: 100px;
+  width: 6000px;
+  display: flex;
+  -moz-flex-direction: column;
+  flex-direction: column; }
+  .invert_scroll .scroll_row {
+    height: 40%;
+    margin: 10px 0; }
+  .invert_scroll .scroll_image {
+    height: 100%;
+    margin: 0 10px; }
+
+.header {
+  height: 100px;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  padding: 0 20px;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: space-between;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  position: fixed; }
+  .header .nav-launcher .menu {
+    background-image: url(/images/icons/menuicon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 20px;
+    height: 20px; }
+  .header .nav-launcher + .nav {
+    display: none; }
+  .header .logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-image: url(/images/icons/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 70px;
+    width: 100px; }
+  .header .social .ig {
+    background-image: url(/images/icons/instagramicon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 20px;
+    height: 20px; }
+  @media only screen and (min-width: 768px) {
+    .header .logo {
+      height: 100px;
+      width: 160px; } }
+
+.works {
+  margin-right: -20px;
+  opacity: 0; }
+  .works.ready {
+    transition: opacity 0.7s ease;
+    opacity: 1; }
+  .works .invert_scroll {
+    padding-top: 20px; }
+
 /*# sourceMappingURL=index.min.css.map */

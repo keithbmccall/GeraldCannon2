@@ -1,0 +1,55 @@
+.header {
+  height: $headermobilepadding;
+  width:100vw;
+  top:0;
+  left:0;
+  padding: 0 $mainmobilepadding;
+  @include justify-content(space-between);
+  @include align-items(center);
+  position:fixed;
+
+  .nav-launcher {
+    .menu {
+      background-image: url(/images/icons/menuicon.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+    }
+
+    + .nav {
+      display: none;
+    }
+  }
+
+  .logo {
+    @include absolute-centered();
+    background-image: url(/images/icons/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 70px;
+    width: 100px;
+    //height: 100px;
+    //width: 160px;
+  }
+
+  .social {
+    .ig {
+      background-image: url(/images/icons/instagramicon.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  @include tabtop {
+    .logo {
+      height: 100px;
+      width: 160px;
+    }
+
+  }
+}

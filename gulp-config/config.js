@@ -1,7 +1,12 @@
-const path = `public/style/css`;
-const srcPath = `public/style/sass`;
+const srcPath = "public/style/sass"
+const destPath = "public/style/css"
+//
+const jsPath = "public/scripts"
+//
+const viewFiles = 'views/**/*.hbs';
+
 
 /* ==========================================================================
    Exports
    ========================================================================== */
-module.exports = {path, srcPath};
+module.exports = {destPath, srcPath, jsPath, viewFiles};

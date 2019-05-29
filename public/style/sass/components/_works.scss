@@ -1,0 +1,12 @@
+.works {
+  margin-right: -$mainmobilepadding;
+  opacity: 0;
+
+  &.ready {
+    @include transition(opacity .7s ease);
+    opacity: 1;
+  }
+  .invert_scroll{
+    padding-top: 20px;
+  }
+}

@@ -5,14 +5,14 @@ const gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     minify = require('gulp-minify'),
     babel = require('gulp-babel');
-const {srcPath} = require('./config');
+const {jsPath} = require('./config');
 
 /* ==========================================================================
    Gulp tasks
    ========================================================================== */
 
 const scripts = () =>
-    gulp.src(srcPath + 'js/*.js')
+    gulp.src(jsPath + "/index.js")
         .pipe(sourcemaps.init())
         .pipe(babel({
             presets: ['@babel/env']
@@ -26,13 +26,13 @@ const scripts = () =>
                 max_line_len: 300
             }
         }))
-        .pipe(gulp.dest(srcPath + 'js/min'));
+        .pipe(gulp.dest(jsPath));
+
 const _watchScripts = () => {
     console.log('\x1b[32m', '====================================', '\x1b[0m');
-    console.log(' Watching:\x1b[32m', themeObj.area + '/' + themeObj.vendor + '/' + themeObj.name, '\x1b[0m');
+    console.log(' Watching:\x1b[32m', jsPath, '\x1b[0m');
     console.log('\x1b[32m', '====================================', '\x1b[0m');
-    // gulp.watch(`${path}css/less/**/*.less`, styles);
-    gulp.watch(`${srcPath}js/*.js`, scripts);
+    gulp.watch(jsPath + "/index.js", scripts);
 };
 const watchScripts = gulp.series(_watchScripts);
 /* ==========================================================================

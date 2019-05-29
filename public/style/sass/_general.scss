@@ -1,0 +1,42 @@
+body {
+  font-family: "Barlow", sans-serif;
+}
+
+li {
+  list-style-type: none;
+}
+
+.flex {
+  @include flexbox;
+}
+
+.absolute-centered {
+  @include absolute-centered()
+}
+
+.absolute-centered-v {
+  @include absolute-centered-vertical();
+}
+
+.absolute-centered-h {
+  @include absolute-centered-horizontal();
+}
+
+.relative {
+  position: relative;
+}
+
+//
+//
+//
+body {
+  overflow-x: hidden;
+}
+
+
+.main {
+  margin-top: $headermobilepadding;
+  padding: 0 $mainmobilepadding;
+
+
+}
