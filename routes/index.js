@@ -4,6 +4,12 @@ const data = require('../data');
 const helpers = require('../helpers');
 
 /* GET home page. */
+router.use(function(req,res,next){
+    res.locals= {
+        navLinks: data.navLinks
+    }
+    next();
+})
 router.get('/', function (req, res) {
     const homeImage = helpers.firstFromList(data.artImageList)
     res.render('pages/home', {title: 'Gerald x Cannon', homeImage});
@@ -19,7 +25,7 @@ router.get('/works', function (req, res) {
     });
 });
 router.get('/contact', function (req, res) {
-    res.render('pages/contact', {title: 'Gerald x Cannon'});
+    res.render('pages/contact');
 });
 router.get('/*', function (req, res) {
     res.redirect('/');

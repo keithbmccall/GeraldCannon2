@@ -1,25 +1,13 @@
 <div class="nav-wrapper relative">
-    <a class="close-icon">
-
-    </a>
+    <a class="close-icon"></a>
     <ul class="nav-list">
-        <li class="list-item">
-            <a href="/">
-                <span>Home</span>
-            </a>
-        </li>
-        <li class="list-item">
-            <a href="/works">
-                <span>Works</span>
-            </a>
-        </li>
-        <li class="list-item">
-            <a href="/contact">
-                <span>Contact</span>
-            </a>
-        </li>
+        {{#each navLinks}}
+            <li class="list-item">
+                <a href="/{{this.route}}">
+                    <span>{{this.name}}</span>
+                </a>
+            </li>
+        {{/each}}
     </ul>
 </div>
-<div class="nav-art">
-
-</div>
+<div class="nav-art"></div>

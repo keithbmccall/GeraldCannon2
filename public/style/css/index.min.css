@@ -438,6 +438,7 @@ li {
     margin-top: 5px;
     border: 1px solid black; }
   .contact #contact-us-form textarea {
+    padding-top: 5px;
     height: 200px; }
   .contact #contact-us-form .submit {
     background-color: #000000;
