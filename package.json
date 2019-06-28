@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "watch": "gulp watch",
-    "start": "nodemon ./bin/www -e js,hbs,css"
+    "start": "nodemon ./bin/www -e js,hbs,css",
+    "h-push": "git push heroku master && git push origin master"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",

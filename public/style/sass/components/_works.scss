@@ -2,17 +2,24 @@
   margin-right: -$mainmobilepadding;
   opacity: 0;
 
+
   &.ready {
     @include transition(opacity .7s ease);
     opacity: 1;
   }
-  .invert_scroll{
+
+  .invert_scroll {
     z-index: -1;
+
+    .scroll_row {
+      height: 40%;
+      margin: 10px 0;
+    }
   }
 
-  @include desktop(){
-    .invert_scroll{
-      padding-left: 10%;
+  @include desktop() {
+    .invert_scroll {
+      padding-left: 40px;
     }
   }
 }

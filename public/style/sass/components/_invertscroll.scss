@@ -8,11 +8,6 @@
   @include flexbox();
   @include flex-direction(column);
 
-  .scroll_row {
-    height: 40%;
-    margin: 10px 0;
-  }
-
   .scroll_image {
     height: 100%;
     margin: 0 10px;
