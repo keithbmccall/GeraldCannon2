@@ -1,4 +1,5 @@
 const artImageList = [
+    "IMG_0781.png",
     "IMG_0806.png",
     "IMG_0807.png",
     "IMG_0808.png",

@@ -7,6 +7,12 @@
     opacity: 1;
   }
   .invert_scroll{
-    padding-top: 20px;
+    z-index: -1;
+  }
+
+  @include desktop(){
+    .invert_scroll{
+      padding-left: 10%;
+    }
   }
 }

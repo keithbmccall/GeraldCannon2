@@ -186,3 +186,10 @@
   left: 50%;
   @include transform(translateX(-50%));
 }
+@mixin page-width-centered(){
+  max-width: 1240px;
+  margin: 0 auto;
+  @include tabtop(){
+    min-width: 300px;
+  }
+}

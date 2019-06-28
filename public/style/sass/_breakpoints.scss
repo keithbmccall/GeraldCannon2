@@ -3,6 +3,11 @@
     @content;
   }
 }
+@mixin large-mobile{
+  @media only screen and (min-width: 500px) and (max-width: 767px)  {
+    @content;
+  }
+}
 // tablet
 @mixin tablet {
   @media only screen and (min-width: 768px) and (max-width: 1023px) {

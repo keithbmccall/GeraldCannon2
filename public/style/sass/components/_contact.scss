@@ -1,0 +1,35 @@
+.contact {
+  width: 100%;
+  padding: 20px 40px 0;
+
+  #contact-us-form {
+
+    .form-inner {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .form-row {
+      margin-top: 5px;
+    }
+
+    select, textarea, input {
+      margin-top: 5px;
+      border: 1px solid black;
+    }
+
+    textarea {
+      height: 200px;
+    }
+
+    .submit {
+      background-color: #000000;
+      color: #ffffff;
+    }
+
+  }
+
+  @include tabtop() {
+    padding-top: 40px;
+  }
+}

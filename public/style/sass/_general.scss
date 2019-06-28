@@ -1,5 +1,6 @@
 body {
   font-family: "Barlow", sans-serif;
+  overflow-x: hidden;
 }
 
 li {
@@ -22,21 +23,97 @@ li {
   @include absolute-centered-horizontal();
 }
 
+.absolute {
+  position: absolute;
+}
+
 .relative {
   position: relative;
 }
 
-//
-//
-//
-body {
-  overflow-x: hidden;
+.fixed {
+  position: fixed;
+  left: 50%;
+  @include transform(translateX(-50%));
 }
 
+.pad-top {
+  padding-top: 40px;
+}
+
+.scroll-over {
+  @include large-mobile() {
+    z-index: 100000;
+    position: relative;
+  }
+  @include mobile() {
+    z-index: 100000;
+    position: relative;
+  }
+}
 
 .main {
   margin-top: $headermobilepadding;
   padding: 0 $mainmobilepadding;
-
-
 }
+
+[class$="-icon"] {
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  @include desktop() {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.menu-icon {
+  background-image: url(/images/icons/menuicon.png);
+}
+
+.close-icon {
+  background-image: url(/images/icons/menuclose.png);
+}
+
+.ig-icon {
+  background-image: url(/images/icons/instagramicon.png);
+}
+
+.content {
+  @include page-width-centered();
+  padding-top: 40px;
+}
+
+.form-row {
+  label, select, input, textarea {
+    width: 100%;
+  }
+
+  select, input, textarea {
+    min-height: 30px;
+    padding-left: 5px;
+    background-color: #ffffff;
+    font-size: 16px;
+  }
+
+  label {
+    display: block;
+  }
+
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    @include border-radius(0);
+
+    &::-ms-expand {
+      display: none;
+    }
+  }
+
+  textarea {
+    resize: none;
+  }
+}
+

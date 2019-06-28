@@ -10,8 +10,9 @@ Array.prototype.shuffle = function () {
     return this;
 }
 
-// const randomizedImageList = artImageList.shuffle();
 
+const firstFromList = array => array[0];
+const listWithoutFirst = array => array.slice(1);
 const breakListInTwo = (array, div) => {
     return {
         listOne: array.slice(0, div),
@@ -19,6 +20,8 @@ const breakListInTwo = (array, div) => {
     }
 }
 const helpers = {
-    breakListInTwo
+    breakListInTwo,
+    firstFromList,
+    listWithoutFirst
 }
 module.exports = helpers;
