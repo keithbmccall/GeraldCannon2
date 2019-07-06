@@ -6,7 +6,12 @@ const fs = require('fs');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const indexRouter = require('./routes/index');
-
+const http = require("http");
+setInterval(function() {
+    http.get("http://geraldxcannon.com");
+}, 300000);
+//
+//
 const app = express();
 // view engine setup
 
