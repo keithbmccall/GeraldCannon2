@@ -310,7 +310,7 @@ li {
     top: 0;
     height: 100vh;
     width: 100%;
-    transition: all 0.4s ease-in-out; }
+    transition: all 0.3s ease-in-out; }
     .header .nav._active {
       left: 0; }
     .header .nav .nav-wrapper {
@@ -321,7 +321,8 @@ li {
         left: 50%;
         -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
-        top: 80px; }
+        top: 80px;
+        left: 47%; }
     .header .nav .nav-list {
       position: absolute;
       left: 50%;

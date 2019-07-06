@@ -31,10 +31,10 @@ function debounce(func, wait, immediate) {
                 let tw = 0;
                 let mw = 0;
                 $topRowContainer.find('.scroll_image').each(function () {
-                    tw += $(this).outerWidth() + 30;
+                    tw += $(this).outerWidth() + 40;
                 })
                 $middleRowContainer.find('.scroll_image').each(function () {
-                    mw += $(this).outerWidth() + 30;
+                    mw += $(this).outerWidth() + 40;
                 })
                 const width = tw > mw ? tw : mw
                 $scrollContainer.width(width);
@@ -58,8 +58,22 @@ function debounce(func, wait, immediate) {
             init: initInvertScroll,
             reInit: reInitInvertScroll
         }
-
+        const invertScrollHandler = targetWrapper => {
+            const _reInitInvertScroll = debounce(() => invertScroll.reInit(targetWrapper), 250)
+            if (!mobileTouchSupport) {
+                $win.on('resize', _reInitInvertScroll);
+            } else {
+                const screenHeight = $win.height() * .85;
+                $body.addClass('touch');
+                $(`.${targetWrapper} > .invert_scroll`).height(screenHeight)
+            }
+            setTimeout(() => {
+                invertScroll.init(targetWrapper);
+            }, 1000)
+        }
         // end invert scroll plug
+
+        //
         // nav launcher
         const toggleNav = () => {
             $('.nav').toggleClass('_active')
@@ -70,15 +84,7 @@ function debounce(func, wait, immediate) {
         const initApp = () => {
             checkIfTouchDevice();
             if ($('.invert_scroll').length) {
-                const _reInitInvertScroll = debounce(() => invertScroll.reInit('works'), 250)
-                if (!mobileTouchSupport) {
-                    $win.on('resize', _reInitInvertScroll);
-                } else {
-                    $body.addClass('touch')
-                }
-                setTimeout(() => {
-                    invertScroll.init("works");
-                }, 1000)
+                invertScrollHandler('works');
             }
 
             if ($('.menu-icon, .close-icon').length) {
