@@ -240,7 +240,7 @@ li {
 .content {
   max-width: 1240px;
   margin: 0 auto;
-  padding-top: 40px; }
+  padding-top: 60px; }
   @media only screen and (min-width: 768px) {
     .content {
       min-width: 300px; } }
@@ -337,12 +337,15 @@ li {
       background-image: url(/images/icons/static.gif);
       background-size: 70%;
       width: 50%; }
+  .header .logo-text {
+    font-size: 23px;
+    text-transform: uppercase; }
   .header .logo {
     position: absolute;
-    top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    bottom: 30px;
     background-image: url(/images/icons/logo.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -354,6 +357,8 @@ li {
       height: 100%;
       width: 100%; }
   @media only screen and (min-width: 768px) {
+    .header .logo-text {
+      font-size: 40px; }
     .header .logo {
       height: 100px;
       width: 160px; }
@@ -393,7 +398,7 @@ li {
         padding-left: 20px; } }
   @media only screen and (min-width: 768px) {
     .home {
-      padding-top: 40px; }
+      padding-top: 60px; }
       .home .left-side {
         width: 60%; }
       .home .right-side {

@@ -1,6 +1,6 @@
 const artImageList = [
     "IMG_0781.png",
-    "IMG_0806.png",
+    // "IMG_0806.png",
     "IMG_0807.png",
     "IMG_0808.png",
     "IMG_0810.png",
@@ -13,7 +13,7 @@ const artImageList = [
     "IMG_0818.png",
     "IMG_0819.png",
     "IMG_0908.png",
-    "IMG_0910.png",
+    // "IMG_0910.png",
     "IMG_0919.png",
     "IMG_0925.png",
     "IMG_0929.png",

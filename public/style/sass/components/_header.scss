@@ -58,9 +58,13 @@
     }
 
   }
-
+  .logo-text{
+    font-size:23px;
+    text-transform: uppercase;
+  }
   .logo {
-    @include absolute-centered();
+    @include absolute-centered-horizontal();
+    bottom:30px;
     background-image: url(/images/icons/logo.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -79,7 +83,10 @@
 
   }
 
-  @include tabtop {
+  @include tabtop() {
+    .logo-text{
+      font-size:40px;
+    }
     .logo {
       height: 100px;
       width: 160px;
