@@ -213,6 +213,13 @@ li {
     z-index: 100000;
     position: relative; } }
 
+.landscape {
+  width: intrinsic !important;
+  width: -moz-max-content !important;
+  width: -webkit-max-content !important;
+  width: max-content !important;
+  height: auto !important; }
+
 .main {
   margin-top: 80px;
   padding: 0 20px; }
@@ -280,6 +287,10 @@ li {
   .invert_scroll .scroll_image {
     height: 100%;
     margin: 0 10px; }
+  @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+    .invert_scroll {
+      -moz-flex-direction: row;
+      flex-direction: row; } }
 
 .header {
   height: 80px;
@@ -288,7 +299,7 @@ li {
   left: 0;
   padding: 0 20px;
   position: fixed;
-  z-index: 1; }
+  z-index: 100000000; }
   .header .header-inner {
     max-width: 1240px;
     margin: 0 auto;
@@ -345,7 +356,7 @@ li {
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
-    bottom: 30px;
+    bottom: 50px;
     background-image: url(/images/icons/logo.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -364,6 +375,15 @@ li {
       width: 160px; }
     .header .nav {
       width: 60%; } }
+  @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+    .header .nav .nav-wrapper .close-icon {
+      top: 30px; }
+    .header .nav .nav-list {
+      top: 80px; }
+    .header .logo {
+      left: 47%;
+      bottom: 10px;
+      width: 70px; } }
 
 .home {
   padding-top: 40px;
@@ -416,6 +436,9 @@ li {
   @media only screen and (min-width: 1024px) {
     .home .about p {
       font-size: 30px; } }
+  @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+    .home .home-image {
+      max-height: 170px; } }
 
 .works {
   margin-right: -20px;
@@ -437,7 +460,8 @@ li {
   padding: 20px 40px 0; }
   .contact > h1 {
     margin-top: 100px;
-    text-align: center; }
+    text-align: center;
+    font-size: 15px; }
     .contact > h1 a {
       padding-bottom: 5px;
       border-bottom: 1px solid #000000; }

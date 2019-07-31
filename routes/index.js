@@ -16,7 +16,7 @@ router.get('/', function (req, res) {
 });
 router.get('/works', function (req, res) {
     const imageList = helpers.listWithoutFirst(data.artImageList);
-    const {listTwo, listOne} = helpers.breakListInTwo(imageList, 10);
+    const {listTwo, listOne} = helpers.breakListInTwo(imageList, 9);
     res.render('pages/works', {
         artImages: {
             top: [...listOne],

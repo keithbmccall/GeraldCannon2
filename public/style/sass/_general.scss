@@ -52,7 +52,13 @@ li {
     position: relative;
   }
 }
-
+.landscape {
+  width: intrinsic !important;
+  width: -moz-max-content !important;
+  width: -webkit-max-content !important;
+  width: max-content !important;
+  height: auto !important;
+}
 .main {
   margin-top: $headermobilepadding;
   padding: 0 $mainmobilepadding;

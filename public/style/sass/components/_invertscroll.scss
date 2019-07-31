@@ -13,4 +13,7 @@
     margin: 0 10px;
 
   }
+  @include landscape(){
+    @include flex-direction(row);
+  }
 }

@@ -42,12 +42,15 @@ function debounce(func, wait, immediate) {
             };
             const options = {
                 height: setScrollContainerWidth(), // optional: define the height the user can scroll, otherwise the overall length will be taken as scrollable height
-                onScroll: function (percent) {   //optional: callback function that will be called when the user scrolls down, useful for animating other things on the page
-                    console.log(percent);
-                }
+                // onScroll: function (percent) {   //optional: callback function that will be called when the user scrolls down, useful for animating other things on the page
+                //     console.log(percent);
+                // }
             }
             $.jInvertScroll([`.${wrapper} .invert_scroll`], options);
             $(`.${wrapper}`).addClass('ready')
+            if (window.matchMedia("(orientation: landscape)").matches) {
+                $('.invert_scroll').addClass('landscape')
+            }
         }
         const reInitInvertScroll = wrapper => {
             $win.scrollTop(0);
@@ -61,11 +64,21 @@ function debounce(func, wait, immediate) {
         const invertScrollHandler = targetWrapper => {
             const _reInitInvertScroll = debounce(() => invertScroll.reInit(targetWrapper), 250)
             if (!mobileTouchSupport) {
-                $win.on('resize', _reInitInvertScroll);
+                $win.on('resize', () => {
+                    _reInitInvertScroll()
+                });
             } else {
                 const screenHeight = $win.height() * .85;
                 $body.addClass('touch');
                 $(`.${targetWrapper} > .invert_scroll`).height(screenHeight)
+                window.addEventListener("orientationchange", () => {
+                    if (window.matchMedia("(orientation: landscape)").matches) {
+                        $('.invert_scroll').removeClass('landscape')
+                    } else if (window.matchMedia("(orientation: portrait)").matches) {
+                        $('.invert_scroll').addClass('landscape')
+                    }
+                    _reInitInvertScroll()
+                });
             }
             setTimeout(() => {
                 invertScroll.init(targetWrapper);

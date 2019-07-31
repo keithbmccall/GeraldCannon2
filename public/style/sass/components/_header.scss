@@ -5,7 +5,7 @@
   left: 0;
   padding: 0 $mainmobilepadding;
   position: fixed;
-  z-index: 1;
+  z-index: 100000000;
 
   .header-inner {
     @include page-width-centered();
@@ -34,7 +34,7 @@
       .close-icon {
         @include absolute-centered-horizontal();
         top: $headermobilepadding;
-        left:47%;
+        left: 47%;
       }
     }
 
@@ -58,13 +58,15 @@
     }
 
   }
-  .logo-text{
-    font-size:23px;
+
+  .logo-text {
+    font-size: 23px;
     text-transform: uppercase;
   }
+
   .logo {
     @include absolute-centered-horizontal();
-    bottom:30px;
+    bottom: 50px;
     background-image: url(/images/icons/logo.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -84,8 +86,8 @@
   }
 
   @include tabtop() {
-    .logo-text{
-      font-size:40px;
+    .logo-text {
+      font-size: 40px;
     }
     .logo {
       height: 100px;
@@ -93,6 +95,27 @@
     }
     .nav {
       width: 60%;
+    }
+  }
+  @include landscape() {
+
+    .nav {
+      .nav-wrapper {
+
+        .close-icon {
+          top: 30px;
+        }
+      }
+
+      .nav-list {
+
+        top: 80px;
+      }
+    }
+    .logo {
+      left:47%;
+      bottom: 10px;
+      width: 70px;
     }
   }
 }
