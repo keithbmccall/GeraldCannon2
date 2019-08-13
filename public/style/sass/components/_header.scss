@@ -60,6 +60,7 @@
   }
 
   .logo-text {
+    @include font-title();
     font-size: 23px;
     text-transform: uppercase;
   }

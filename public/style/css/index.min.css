@@ -349,6 +349,7 @@ li {
       background-size: 70%;
       width: 50%; }
   .header .logo-text {
+    font-family: "Oswald", sans-serif;
     font-size: 23px;
     text-transform: uppercase; }
   .header .logo {

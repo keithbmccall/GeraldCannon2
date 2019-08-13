@@ -1,0 +1,6 @@
+@mixin font-base() {
+  font-family: "Barlow", sans-serif;
+}
+@mixin font-title() {
+  font-family: "Oswald", sans-serif;
+}
