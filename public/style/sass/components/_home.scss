@@ -1,5 +1,5 @@
 .home {
-  padding-top: 40px;
+  padding-top: 80px;
   width: 100%;
   overflow: scroll;
 
@@ -40,7 +40,7 @@
   }
 
   @include large-mobile() {
-    padding-top: 40px;
+    padding-top: 80px;
     .left-side {
       width: 60%;
     }
