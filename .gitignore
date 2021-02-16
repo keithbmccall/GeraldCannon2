@@ -1,3 +1,5 @@
 node_modules
 public/images/paper
 public/images/pieces
+./.idea
+.idea/*
