@@ -10,26 +10,26 @@
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
-    "express": "~4.16.1",
-    "hbs": "~4.0.4",
+    "express": "~4.19.2",
+    "hbs": "~4.2.0",
     "http": "0.0.0",
-    "http-errors": "~1.6.3",
-    "morgan": "~1.9.1",
-    "nodemon": "^1.19.4"
+    "http-errors": "~2.0.0",
+    "morgan": "~1.10.0",
+    "nodemon": "^3.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
     "browser-sync": "^2.26.5",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^6.1.0",
+    "gulp": "^5.0.0",
+    "gulp-autoprefixer": "^9.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.1",
-    "gulp-csso": "^3.0.1",
-    "gulp-livereload": "^4.0.1",
+    "gulp-csso": "^4.0.1",
+    "gulp-livereload": "^4.0.2",
     "gulp-minify": "^3.1.0",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.5"
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0"
   }
 }
