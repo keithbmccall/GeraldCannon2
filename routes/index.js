@@ -12,6 +12,9 @@ router.use(function(req,res,next){
 })
 router.get('/', function (req, res) {
     const homeImage = helpers.firstFromList(data.artImageList)
+    console.log({
+        pr: process.env.hygraphUrl
+    })
     res.render('pages/home', {title: 'Gerald x Cannon', homeImage});
 });
 router.get('/works', function (req, res) {
